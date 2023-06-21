@@ -30,9 +30,7 @@ function PageTransitions(){
 
             // stores the value of current click active component by showing it in console 
             const element = document.getElementById(id);
-            element.classList.add('active');
-
-            
+            element.classList.add('active');            
         }
     })
 }
