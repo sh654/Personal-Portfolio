@@ -80,7 +80,34 @@ section{
 .sec5{
     display: none;
     transform: translateY(0) scale(1);
+
 }
+
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scaleY(0);
+        }
+
+        100%{
+            transform: translateY(0) scaleY(1);
+        }
+    }
+
+}
+// animation: scaleAnim 1s ease-in-out;: This sets the animation property of the element with the .active class. 
+// It applies the animation named scaleAnim to the element with a duration of 1 second (1s) and an easing function of "ease-in-out". 
+// This means the animation will start slowly, accelerate in the middle, and slow down at the end. 
+//  @keyframes scaleAnim { ... }: This is the start of a @keyframes rule, which defines an animation sequence. 
+//  It specifies that the animation sequence is named scaleAnim. 
+//  The following properties define the different keyframes (steps) of the animation. 
+//   0% { ... }: This defines the styles at the beginning of the animation (0% progress). I
+//   nside this block, it sets the following styles:  
+//   transform: translateY(-100%) scaleY(0);: This sets the transform property to translate the element vertically by -100% of its height (moving it offscreen) and scale it along the Y-axis to 0 (making it invisible). 
+//   100% { ... }: This defines the styles at the end of the animation (100% progress). Inside this block, it sets the following styles:  
+//   transform: translateY(0) scaleY(1);: This sets the transform property to translate the element vertically by 0 (bringing it back to its original position) and scale it along the Y-axis to 1 (restoring its original size).
 
 //Controls
 .controls {
@@ -118,4 +145,15 @@ section{
     }
 }
 
+.image-edit{
+    mix-blend-mode: multiply;
+   
+}
+
+//Header content
+.header-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); //use to make left and right header differnet
+
+}
 //https://github.com/sh654/Personal-Portfolio.git git repo
